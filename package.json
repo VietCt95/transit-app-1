@@ -1,10 +1,18 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "greenus",
+  "version": "1.0.0",
+  "main": "App.js",
+  "description": "tranist app which shhow co2 commissions cut",
+  "author": "Viet Dinh",
   "private": true,
   "dependencies": {
+    "@expo/vector-icons": "^6.3.1",
     "expo": "^27.0.1",
+    "prop-types": "^15.6.1",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-27.0.0.tar.gz",
-    "react-native-facebook-login": "^1.6.1"
+    "react-native-elements": "^1.0.0-beta3",
+    "react-native-facebook-login": "^1.6.1",
+    "react-navigation": "^1.5.12"
   }
 }
