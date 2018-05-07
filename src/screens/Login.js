@@ -11,15 +11,17 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 import { Font } from 'expo';
-import { Input, Button } from 'react-native-elements'
+import { Input, Button } from 'react-native-elements';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 import SimpleIcon from 'react-native-vector-icons/SimpleLineIcons';
 
+import MapTab from '../tabs/Map'
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 
-const BG_IMAGE = require('../../assets/images/bg_screen4.jpg');
+const BG_IMAGE = require('../../assets/images/login-background.jpg');
 
 // Enable LayoutAnimation on Android
 UIManager.setLayoutAnimationEnabledExperimental
@@ -37,7 +39,8 @@ TabSelector.propTypes = {
   selected: PropTypes.bool.isRequired,
 };
 
-export default class LoginScreen extends Component {
+
+export default class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -117,6 +120,7 @@ export default class LoginScreen extends Component {
   }
 
   render(){
+    const { navigate } = this.props.navigation;
     const {
       selectedCategory,
       isLoading,
@@ -266,7 +270,7 @@ export default class LoginScreen extends Component {
                       titleStyle={{color: 'white'}}
                       buttonStyle={styles.loginAsGuessButton}
                       underlayColor='transparent'
-                      onPress={() => console.log('Todo: Log to Main screens')}
+                      onPress={() => navigate('Map')}
                     />
                       </View>
                       : null
@@ -316,7 +320,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   loginButton: {
-    backgroundColor: 'rgba(232, 147, 142, 1)',
+    backgroundColor: 'forestgreen',
     borderRadius: 10,
     height: 50,
     width: 200,

@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
 import Expo, { AppLoading, Asset, Font } from 'expo';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
-import { StyleSheet, Text, View } from 'react-native';
-import { MapView } from 'expo';
-import RootNavigation from './src/navigation/RootNavigation';
-import LoginScreen from './src/screens/Login';
+import { Text, View, Dimensions, Image } from 'react-native';
+
+import SideBarNavigation from './src/navigation/SideBarNavigation';
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
 
 
-function cacheFonts(fonts) {
+
+cacheFonts = (fonts) => {
   return fonts.map(font => Font.loadAsync(font));
 }
 
@@ -48,18 +50,9 @@ export default class App extends Component {
     }
 
     return (
-      <LoginScreen/>
+      <SideBarNavigation/>
     );
   }
 }
 
 Expo.registerRootComponent(App);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

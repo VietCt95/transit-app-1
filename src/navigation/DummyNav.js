@@ -2,22 +2,24 @@ import { Notifications } from 'expo';
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
-import registerForPushNotificationsAsync from '../../api/registerForPushNotificationsAsync';
+import registerForPushNotificationsAsync from '../api/registerForPushNotificationsAsync';
 
-import LoginScreen from '../screens/Login'
-
+import Map from '../screens/Map';
+import Login from '../screens/Login';
 
 const RootStackNavigator = StackNavigator(
   {
-    Home: {
-        screen: LoginScreen,
+    Map: {
+        screen: Map,
     },
-    
+    Login:{
+        screen: Login
+    },
   },
 
 );
 
-export default class RootNavigator extends React.Component {
+export default class DummyNav extends React.Component {
   componentDidMount() {
     this._notificationSubscription = this._registerForPushNotifications();
   }
