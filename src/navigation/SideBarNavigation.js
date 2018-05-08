@@ -60,7 +60,7 @@ const CustomDrawerContentComponent = props => (
           marginLeft: 0,
         },
       },
-      drawerWidth: SCREEN_WIDTH * 0.5,
+      drawerWidth: SCREEN_WIDTH * 0.45,
       contentComponent: CustomDrawerContentComponent,
       drawerOpenRoute: 'DrawerOpen',
       drawerCloseRoute: 'DrawerClose',

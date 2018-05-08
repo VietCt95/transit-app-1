@@ -10,14 +10,15 @@ export default class Dashboard extends Component{
             <View style={{flex: 1}}>
                 <View style={styles.avatarContainer}>
                     <Avatar
-                          large
-                          rounded
-                          title="G"
-                          onPress={() => console.log("Works!")}
-                          activeOpacity={0.7}
+                        width={100}
+                        height={100}
+                        rounded
+                        source={{uri: "http://pixelartmaker.com/art/e2dc0419ba5a091.png"}}
+                        onPress={() => console.log("Works!")}
+                        activeOpacity={0.7}
                     />
                 </View>
-                <View>
+                <View style={styles.dashboardInfor}>
                 </View>
             </View>
         )
@@ -27,9 +28,13 @@ export default class Dashboard extends Component{
 const styles = StyleSheet.create({
     avatarContainer:{
         flex: 1,
+        backgroundColor: 'white',
         justifyContent: 'flex-start',
         alignItems: 'center',
         marginTop: 5
     },
+    dashboardInfor:{
+        flex: 4
+    }
 
 })

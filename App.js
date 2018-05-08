@@ -5,8 +5,6 @@ import { Text, View, Dimensions, Image } from 'react-native';
 
 import SideBarNavigation from './src/navigation/SideBarNavigation';
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
-
 
 
 cacheFonts = (fonts) => {
@@ -20,14 +18,9 @@ export default class App extends Component {
 
   async _cacheResourcesAsync() {
     const images = [
-      require('./assets/images/bg_screen1.jpg'),
-      require('./assets/images/bg_screen2.jpg'),
-      require('./assets/images/bg_screen3.jpg'),
-      require('./assets/images/bg_screen4.jpg'),
-      require('./assets/images/user-cool.png'),
+      require('./assets/images/login-background.jpg'),
       require('./assets/images/user-hp.png'),
-      require('./assets/images/user-student.png'),
-      require('./assets/images/avatar1.jpg'),
+      require('./assets/icons/main-logo.png'),
     ];
     const cacheImages = images.map((image) => {
       return Asset.fromModule(image).downloadAsync();

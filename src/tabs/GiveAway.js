@@ -19,6 +19,10 @@ const GiveAwayTab = StackNavigator({
         borderBottomWidth: 0,
         backgroundColor: 'forestgreen',
       },
+      headerTitleStyle: {
+        fontWeight: 'bold',
+        color: 'white'
+      },
       headerLeft: (
         <Icon
           name="menu"
