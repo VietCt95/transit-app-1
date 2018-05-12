@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { MapView, Location, Permissions } from 'expo';
-import { View, StyleSheet, Dimensions, Sear } from 'react-native';
-import { SearchBar } from 'react-native-elements';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
-import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import { View, StyleSheet, Dimensions } from 'react-native';
+
+import MapSearchBar from '../components/MapSearchBar';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
@@ -35,9 +33,9 @@ export default class Map extends Component{
     }
     _getLocationAsync = async () => {
         let { status } = await Permissions.askAsync(Permissions.LOCATION);
-        if (status !== 'granted') {
+        if (status === 'granted') {
           this.setState({
-            isPermited: false
+            isPermited: true
           });
         }
         let location = await Location.getCurrentPositionAsync({});
@@ -63,19 +61,7 @@ export default class Map extends Component{
 
         return(
             <View style={{flex:1}}>
-                <View style={styles.searchArea}>
-                    <EvilIcons
-                        style={styles.icon} 
-                        name='location'
-                        size={25}
-                    />
-                    <SearchBar
-                        containerStyle={styles.searchBar}
-                        placeholder="Destination" 
-                        platform="ios" 
-                        {...searchBarProps} 
-                    />
-                </View>
+                <MapSearchBar/>
                 <MapView style={styles.map}
                     initialRegion={this.initialRegion}
                 />   
@@ -84,37 +70,7 @@ export default class Map extends Component{
     }
 }
 
-const searchBarProps = {
-    showLoading: false,
-    lightThme: true,
-    onFocus: () => console.log("focus"),
-    onBlur: () => console.log("blur"),
-    onCancel: () => console.log("cancel"),
-    onClearText: () => console.log("cleared"),
-    onChangeText: text => console.log("text:", text),
-  }
-  
-
 const styles = StyleSheet.create({
-    searchArea: {
-        flex: 1,
-        flexDirection: 'row',
-        backgroundColor: 'forestgreen',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-end'
-    },
-    icon: {
-        top: -20,
-        color: 'white',
-        flex: 1,
-        left: 10,
-    },
-    searchBar: {
-        width: 10,
-        flex: 19,
-        right: -10,
-        backgroundColor: 'transparent' 
-    },
     map: {
         flex: 6,
     },

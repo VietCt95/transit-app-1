@@ -34,14 +34,14 @@ const NEXT_GIFT = [
     positive: false
   },
   {
-    name: 'Andy Vitale',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/andyvitale/128.jpg',
+    name: 'Dell XPS',
+    avatar: 'https://s.aolcdn.com/hss/storage/midas/199376e393dc744e85546cd5c55658ce/205605150/dell-xps-13-intel-8th-gen-quad-core-2017-08-28-01.jpg',
     value: '- 230',
     positive: false
   },
   {
-    name: 'Katy Friedson',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg',
+    name: 'Beat Headphone',
+    avatar: 'https://www.beatsbydre.com/content/dam/beats/web/pcp/headphones/pro/_0002_overear-pro-black-rgb-thrqrtleft.png.large.1x.png',
     value: '+ 160',
     positive: true
   },
