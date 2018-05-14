@@ -175,7 +175,7 @@ export default class GiveAway extends Component {
                       title='Description'
                       buttonStyle={{height: 33, width: 120, backgroundColor: 'rgba(222, 223, 226, 1)', borderRadius: 5}}
                       titleStyle={{fontFamily: 'regular', fontSize: 13, color: 'gray'}}
-                      onPress={() => console.log('aye')}
+                      onPress={() => console.log('Todo: Show Description')}
                       underlayColor="transparent"
                     />
                   </View>
@@ -184,7 +184,7 @@ export default class GiveAway extends Component {
                       title='Enter'
                       buttonStyle={{height: 33, width: 120, backgroundColor: 'rgba(113, 154, 112, 1)', borderRadius: 5}}
                       titleStyle={{fontFamily: 'regular', fontSize: 13, color: 'white'}}
-                      onPress={() => console.log('aye')}
+                      onPress={() => console.log('Todo: Enter giveaway')}
                       underlayColor="transparent"
                     />
                   </View>

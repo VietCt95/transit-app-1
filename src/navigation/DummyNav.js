@@ -6,6 +6,8 @@ import registerForPushNotificationsAsync from '../api/registerForPushNotificatio
 
 import Map from '../screens/Map';
 import Login from '../screens/Login';
+import DashBoard from '../screens/Dashboard';
+import GiveAway from '../screens/GiveAway';
 
 const RootStackNavigator = StackNavigator(
   {
@@ -15,6 +17,12 @@ const RootStackNavigator = StackNavigator(
     Login:{
         screen: Login
     },
+    DashBoard:{
+        screen: DashBoard
+    },
+    GiveAway: {
+      screen: GiveAway
+    }
   },
 
 );
