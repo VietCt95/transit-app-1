@@ -10,7 +10,8 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 const SCREEN_HEIGHT = Dimensions.get('window').height;
 const ASPECT_RATIO = SCREEN_WIDTH/SCREEN_HEIGHT;
 
-const GOOGLE_MAPS_API_KEY = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+
+const GOOGLE_MAPS_API_KEY = 'Replace this with your API key';
 
 const initialRegion = {
     latitude: 37.3382,
